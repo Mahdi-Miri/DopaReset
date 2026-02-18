@@ -3,6 +3,7 @@
 
 import Foundation
 import StoreKit
+import Combine
 
 @MainActor
 final class PremiumManager: ObservableObject {

@@ -3,6 +3,7 @@
 // App entry point – handles routing between onboarding and main tab view
 
 import SwiftUI
+import Combine 
 
 @main
 struct DopaResetApp: App {

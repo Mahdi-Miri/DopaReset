@@ -6,21 +6,68 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		574724E82F462EED000B7B31 /* DeviceActivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 574724E72F462EED000B7B31 /* DeviceActivity.framework */; };
+		574724F02F462EED000B7B31 /* DetoxActivityMonitor.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 574724E52F462EED000B7B31 /* DetoxActivityMonitor.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		574724EE2F462EED000B7B31 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8BA0B6282F45BE9000F10A9F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 574724E42F462EED000B7B31;
+			remoteInfo = DetoxActivityMonitor;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		574724F12F462EED000B7B31 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				574724F02F462EED000B7B31 /* DetoxActivityMonitor.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		574724E52F462EED000B7B31 /* DetoxActivityMonitor.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DetoxActivityMonitor.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		574724E72F462EED000B7B31 /* DeviceActivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DeviceActivity.framework; path = System/Library/Frameworks/DeviceActivity.framework; sourceTree = SDKROOT; };
 		8BA0B6302F45BE9000F10A9F /* DopaReset.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DopaReset.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		574724F52F462EED000B7B31 /* Exceptions for "DetoxActivityMonitor" folder in "DetoxActivityMonitor" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 574724E42F462EED000B7B31 /* DetoxActivityMonitor */;
+		};
 		8BA0B63D2F45BE9100F10A9F /* Exceptions for "DopaReset" folder in "DopaReset" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
+				ScreenTimeMonitorExtension/Info.plist,
 			);
 			target = 8BA0B62F2F45BE9000F10A9F /* DopaReset */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		574724E92F462EED000B7B31 /* DetoxActivityMonitor */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				574724F52F462EED000B7B31 /* Exceptions for "DetoxActivityMonitor" folder in "DetoxActivityMonitor" target */,
+			);
+			path = DetoxActivityMonitor;
+			sourceTree = "<group>";
+		};
 		8BA0B6322F45BE9000F10A9F /* DopaReset */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
@@ -32,6 +79,14 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		574724E22F462EED000B7B31 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				574724E82F462EED000B7B31 /* DeviceActivity.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8BA0B62D2F45BE9000F10A9F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -42,10 +97,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		574724E62F462EED000B7B31 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				574724E72F462EED000B7B31 /* DeviceActivity.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8BA0B6272F45BE9000F10A9F = {
 			isa = PBXGroup;
 			children = (
 				8BA0B6322F45BE9000F10A9F /* DopaReset */,
+				574724E92F462EED000B7B31 /* DetoxActivityMonitor */,
+				574724E62F462EED000B7B31 /* Frameworks */,
 				8BA0B6312F45BE9000F10A9F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				8BA0B6302F45BE9000F10A9F /* DopaReset.app */,
+				574724E52F462EED000B7B31 /* DetoxActivityMonitor.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -61,6 +127,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		574724E42F462EED000B7B31 /* DetoxActivityMonitor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 574724F42F462EED000B7B31 /* Build configuration list for PBXNativeTarget "DetoxActivityMonitor" */;
+			buildPhases = (
+				574724E12F462EED000B7B31 /* Sources */,
+				574724E22F462EED000B7B31 /* Frameworks */,
+				574724E32F462EED000B7B31 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				574724E92F462EED000B7B31 /* DetoxActivityMonitor */,
+			);
+			name = DetoxActivityMonitor;
+			packageProductDependencies = (
+			);
+			productName = DetoxActivityMonitor;
+			productReference = 574724E52F462EED000B7B31 /* DetoxActivityMonitor.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		8BA0B62F2F45BE9000F10A9F /* DopaReset */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8BA0B63E2F45BE9100F10A9F /* Build configuration list for PBXNativeTarget "DopaReset" */;
@@ -68,10 +156,12 @@
 				8BA0B62C2F45BE9000F10A9F /* Sources */,
 				8BA0B62D2F45BE9000F10A9F /* Frameworks */,
 				8BA0B62E2F45BE9000F10A9F /* Resources */,
+				574724F12F462EED000B7B31 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				574724EF2F462EED000B7B31 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				8BA0B6322F45BE9000F10A9F /* DopaReset */,
@@ -90,9 +180,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 2600;
+				LastSwiftUpdateCheck = 2620;
 				LastUpgradeCheck = 2600;
 				TargetAttributes = {
+					574724E42F462EED000B7B31 = {
+						CreatedOnToolsVersion = 26.2;
+					};
 					8BA0B62F2F45BE9000F10A9F = {
 						CreatedOnToolsVersion = 26.0.1;
 					};
@@ -113,11 +206,19 @@
 			projectRoot = "";
 			targets = (
 				8BA0B62F2F45BE9000F10A9F /* DopaReset */,
+				574724E42F462EED000B7B31 /* DetoxActivityMonitor */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		574724E32F462EED000B7B31 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8BA0B62E2F45BE9000F10A9F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -128,6 +229,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		574724E12F462EED000B7B31 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8BA0B62C2F45BE9000F10A9F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -137,7 +245,75 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		574724EF2F462EED000B7B31 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 574724E42F462EED000B7B31 /* DetoxActivityMonitor */;
+			targetProxy = 574724EE2F462EED000B7B31 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		574724F22F462EED000B7B31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = DetoxActivityMonitor/DetoxActivityMonitor.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A49MK4BK3H;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DetoxActivityMonitor/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DetoxActivityMonitor;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mahdimiri.DopaReset.DetoxActivityMonitor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		574724F32F462EED000B7B31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = DetoxActivityMonitor/DetoxActivityMonitor.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A49MK4BK3H;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DetoxActivityMonitor/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DetoxActivityMonitor;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mahdimiri.DopaReset.DetoxActivityMonitor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		8BA0B63F2F45BE9100F10A9F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -146,7 +322,7 @@
 				CODE_SIGN_ENTITLEMENTS = DopaReset/DopaReset.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MR6J26BKS3;
+				DEVELOPMENT_TEAM = A49MK4BK3H;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DopaReset/Info.plist;
@@ -180,7 +356,7 @@
 				CODE_SIGN_ENTITLEMENTS = DopaReset/DopaReset.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MR6J26BKS3;
+				DEVELOPMENT_TEAM = A49MK4BK3H;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DopaReset/Info.plist;
@@ -330,6 +506,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		574724F42F462EED000B7B31 /* Build configuration list for PBXNativeTarget "DetoxActivityMonitor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				574724F22F462EED000B7B31 /* Debug */,
+				574724F32F462EED000B7B31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		8BA0B62B2F45BE9000F10A9F /* Build configuration list for PBXProject "DopaReset" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
