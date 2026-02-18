@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+    "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  ScreenTimeMonitorExtension/Info.plist
+
+  IMPORTANT: In Xcode, add a new target:
+    File → New → Target → Device Activity Monitor Extension
+  Set the Principal Class to:
+    $(PRODUCT_MODULE_NAME).DeviceActivityMonitorExtension
+  Then add this target to the same App Group used by the main app:
+    group.com.doparest.shared
+
+  Required entitlements for BOTH targets (main app + extension):
+    com.apple.developer.family-controls: YES
+    com.apple.security.application-groups: [group.com.doparest.shared]
+-->
+<plist version="1.0">
+<dict>
+    <!-- Extension type -->
+    <key>NSExtension</key>
+    <dict>
+        <key>NSExtensionPointIdentifier</key>
+        <string>com.apple.deviceactivity.monitor</string>
+        <key>NSExtensionPrincipalClass</key>
+        <string>$(PRODUCT_MODULE_NAME).DeviceActivityMonitorExtension</string>
+    </dict>
+
+    <!-- Privacy strings (copy these to main app Info.plist too) -->
+    <key>NSFamilyControlsUsageDescription</key>
+    <string>DopaReset uses Screen Time to monitor your selected apps and send you a notification when you've been scrolling too long.</string>
+
+    <!-- Minimum OS -->
+    <key>MinimumOSVersion</key>
+    <string>18.0</string>
+</dict>
+</plist>
