@@ -198,10 +198,10 @@ private struct ActivitiesStep: View {
                 .padding(.horizontal, 24)
             }
 
-            PrimaryButton(
-                title: "Continue",
-                isEnabled: !viewModel.selectedActivities.isEmpty
-            ) { viewModel.next() }
+            PrimaryButton(title: "Continue") {
+                viewModel.next()
+            }
+
             .padding(.horizontal, 32)
             .padding(.bottom, 48)
         }
@@ -300,13 +300,17 @@ private struct AppSelectionStep: View {
 
             Spacer()
 
-            PrimaryButton(
-                title: "Continue",
-                isEnabled: !viewModel.activitySelection.applicationTokens.isEmpty
-            ) {
-                viewModel.buildMonitoredAppsFromSelection()
+            PrimaryButton(title: "Continue") {
+                // Only build monitored apps if there are apps selected (optional but safer)
+                if !viewModel.activitySelection.applicationTokens.isEmpty {
+                    viewModel.buildMonitoredAppsFromSelection()
+                } else {
+                    // If user skipped, ensure monitoredApps is empty (so next screens don't break)
+                    viewModel.monitoredApps = []
+                }
                 viewModel.next()
             }
+
             .padding(.horizontal, 32)
             .padding(.bottom, 48)
         }
